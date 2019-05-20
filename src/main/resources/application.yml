@@ -1,0 +1,18 @@
+catalogue:
+  url: http://localhost:8081
+spring:
+  profiles:
+    active:
+      - @buildEnvironment@
+  datasource:
+    username: @db.username@
+    password: @db.password@
+    url: jdbc:mysql://localhost:3306/cart?serverTimezone=UTC
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        show_sql: true
+        format_sql: true
