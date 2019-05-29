@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: cart
+  profiles:
+    active:
+      ${CART_PROFILE}
+  cloud:
+    config:
+      uri: ${CONFIGSERVER_URI}
